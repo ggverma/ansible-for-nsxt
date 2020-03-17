@@ -1,0 +1,18 @@
+- hosts: localhost
+  tasks:
+    - name: Update DHCP Server Config
+      nsxt_policy_dhcp_server_config:
+        hostname: "default"
+        nsx_cert_path: /root/com.vmware.nsx.ncp/nsx.crt
+        nsx_key_path: /root/com.vmware.nsx.ncp/nsx.key
+        validate_certs: False
+        display_name: test-dhcp-server-config
+        state: present
+        edge_cluster_info:
+          edge_cluster_display_name: EDGECLUSTER1
+        lease_time: 100
+        preferred_edge_nodes_info:
+          - edge_cluster_display_name: EDGECLUSTER1
+            edge_node_display_name: NODE1
+        server_addresses:
+          - '100.100.0.1/8'

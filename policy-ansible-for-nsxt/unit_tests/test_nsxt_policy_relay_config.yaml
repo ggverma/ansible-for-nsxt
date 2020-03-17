@@ -1,0 +1,12 @@
+- hosts: localhost
+  tasks:
+    - name: Update DHCP Relay Config
+      nsxt_policy_dhcp_relay_config:
+        hostname: "default"
+        nsx_cert_path: /root/com.vmware.nsx.ncp/nsx.crt
+        nsx_key_path: /root/com.vmware.nsx.ncp/nsx.key
+        validate_certs: False
+        display_name: test-dhcp-relay-config
+        state: present
+        server_addresses:
+          - '100.100.0.12'

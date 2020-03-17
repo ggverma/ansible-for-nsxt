@@ -53,6 +53,7 @@ IPV6_DAD_PROFILE_URL = '/infra/ipv6-dad-profiles'
 IPV6_NDRA_PROFILE_URL = '/infra/ipv6-ndra-profiles'
 
 DHCP_RELAY_CONFIG_URL = '/infra/dhcp-relay-configs'
+DHCP_SERVER_CONFIG_URL = '/infra/dhcp-server-configs'
 
 EDGE_CLUSTER_URL = _ENFORCEMENT_POINT_URL + '/{}/edge-clusters'
 EDGE_NODE_URL = EDGE_CLUSTER_URL + '/{}/edge-nodes'
